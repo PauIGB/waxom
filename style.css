@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic');
+body, input, textarea, select {    
+    background: #f8f8f8; 
+}
+body, select, input, textarea, select {
+    font-family: 'Open Sans', sans-serif;
+    color: #333; 
+}
+.clearFix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+html, body, .wrapper {
+    height: 100%;
+}
+.content {
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 36px;
+}
+header {    
+/*    background:rgba(212, 231, 238, 0.8);*/
+    background: url(img/head_bg_pat.png);
+    border-bottom: 1px solid #adc0ce; 
+}
+main {
+    padding: 2% 8%;
+    margin-bottom: 20px; 
+    max-width: 1366px;
+    margin: 0 auto;
+}
+footer {
+/*    border-top: 1px solid #a2b4c1;*/
+    border-top: 1px solid #6894b4;
+    box-sizing: border-box;
+    height: 36px;
+    margin-top: -36px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*    background:rgba(178, 201, 209, 0.89);*/
+    background: url(img/foot_bg_pat.png);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+h1, h3 {
+    text-align: center;
+}
+h1 {
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+    padding: 25px 0;        
+}
+h1.main strong {
+/*    color: rgba(255, 51, 51, 0.92);*/
+    font-size: 32px;
+}
+.logo {
+    float: left;
+    height: 38px;
+    width: 185px;
+    background: url(img/logo.png) no-repeat;
+    margin-left: 4%;
+    margin-top: 4px;
+}
+nav ul {
+    margin: 0;
+    padding: 0;       
+    display: flex;     
+    justify-content: flex-end;
+}
+nav li {  
+    list-style-type: none;     
+}
+nav a {
+    display: block;   
+    color: #29838c;  
+    background: rgba(173, 192, 206, .2); 
+    text-decoration: none;   
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);       
+    transition: .3s linear;  
+    transition-property: background;
+}
+nav > ul > li > a {
+    padding: 14px 18px;
+    font-size: 16px;    
+    letter-spacing: 2px;    
+    border-left: 1px solid #adc0ce;    
+}
+nav ul ul a {
+    padding: 8px 10px 6px;
+    font-size: 12px;
+}
+nav a:hover {
+    background: rgba(173, 192, 206, 0.6);
+}
+nav ul > li {
+  position: relative;
+}
+nav ul ul {
+    display: block;    
+    position: absolute;    
+    box-sizing: border-box;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    max-height: 0;
+    transform: translateY(100%);     
+    white-space: nowrap;
+    text-align: right;
+    background: rgba(242, 244, 255, 0.56);
+    border-bottom: 1px solid #adc0ce; 
+    border-left: 1px solid #adc0ce; 
+    border-bottom-left-radius: 5px;
+    transition: .6s ease-in-out;
+}
+.nav-toggle:after {
+    content: ' ';
+    border: 4px solid;
+    border-color: #29838c transparent transparent transparent;
+    position: absolute;
+    top: 18px;
+    right: 6px; 
+    transition: .5s ease;
+}
+.nav-toggle:hover:after {
+    transform: scaleY(-1);
+}
+nav ul > li:hover ul{
+    max-height: 1000px;    
+}
+.greeting p {
+    text-indent: 20px;    
+    hyphens: auto;
+}
+.catalog {   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+.catalog a {    
+    width: 260px;
+    height: 300px;
+    display: block;  
+    background: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;   
+    transition: .5s;
+    margin: 2% 1%;
+}
+.catalog a:hover {   
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2); 
+    border: none;
+}
+.catalog img {
+    width: 86%; 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 6px;
+}
+.catalog figure {
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+/*СТРАНИЦА ТОВАРА*/
+.shortDes {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.shortDes img {
+    width: 520px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2); 
+    margin: 0 auto;
+}
+.orderInfo {        
+    padding: 10px 10px 10px 50px;
+    margin: 0 auto;
+    width: 550px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.orderInfo p {
+    color: #707070;
+    font-size: 18px;    
+    font-style: italic;
+}
+.orderForm select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 40;    
+}
+.price {
+    font-size: 40px;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #ab2328;
+    padding: 30px 0;
+}
+.sizeOpt {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.numberOpt {
+    padding: 5px 15px 5px 10px;    
+}
+.orderForm input[type="submit"] {
+    display: inline-block;
+    height: 50px;
+    width: 256px;
+    border: none;
+    border-radius: 5px;
+    background: #3b50ef;
+    color: #fff;
+    font-size: 26px;
+    text-transform: uppercase;   
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;    
+    transition: .5s;
+    transition-property: background, box-shadow, text-shadow; 
+}
+.orderForm input[type="submit"]:hover {
+    background: #485dfc;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.orderForm input[type="submit"]:active {
+    background: #485dfc;
+    box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.hide {
+    display: none;
+}        
+.toggle {
+    cursor: pointer;    
+}
+.toggle:after {
+    content: 'Таблица размеров';
+    cursor: pointer;
+    color: #08f;
+    font-size: 18px;
+    font-family: monospace;
+    text-decoration: underline; 
+    letter-spacing: 2px;    
+}
+.toggle:hover:after {
+    text-decoration: none;
+}
+#sizeBox:checked + .toggle:after {
+    content: 'Cвернуть';
+}
+#sizeBox:checked ~ .sizeBox {
+    display: block;
+}
+.size {    
+    margin: 10px auto 0;
+    text-align: center;
+    border-collapse: collapse;  
+}
+.size, .size thead {
+    border: 2px solid #333;
+}
+.size td, .size th {
+    border: 1px solid #333;
+    padding: 1px 5px;
+}
+.size caption {
+    font-weight: bold;
+}
+thead tr {
+    background: rgb(158, 181, 190);
+    color: #ffffff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.size tbody tr:nth-child(even){
+    background: #ededed;
+}
+.fullDes {
+    color: #484343;
+    font-size: 16px;    
+    line-height: 24px;      
+}
+.char {
+    color: #40403a;
+    font-size: 15px;
+    line-height: 20px;
+    list-style-image: url(img/marker.png);
+}
+
+/*КОНТАКТЫ*/
+#feedback, #address{
+    color: #6a6a6a;
+    font-size: 22px;
+}
+.feedback {
+    padding: 0 30px 50px;
+    margin-bottom: 15px;    
+}
+.address{
+    border: .5px dotted #ccc;
+    border-radius: 5px;
+    padding: 0 30px 50px;
+    background: #fafafa;
+}
+/*ФОРМА ОБРАТНОЙ СВЯЗИ*/
+.feedback-form {    
+    width: 500px;
+    padding: 30px 25px;   
+    border: 1px solid #a29f9f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.2);   
+    background:rgba(212, 231, 238, 0.2);
+    margin: 0 auto;
+}
+.feedback-form input, .feedback-form textarea, .feedback-form select {
+    display: block;    
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 22px;
+}
+.feedback-form textarea, input[name="fb_name"], input[name="fb_email"] {    
+    padding: 0 3px;   
+}
+.feedback-form textarea:focus, 
+.feedback-form select:focus, 
+input[name="fb_name"]:focus, input[name="fb_email"]:focus {    
+    background: #fff;
+}
+input[name="fb_email"]:focus {    
+    color: rgb(6, 0, 152);
+}
+.feedback-form textarea {
+    height: 200px;
+}
+input[name="fb_name"], input[name="fb_email"] {    
+    height: 32px;        
+}
+.feedback-form select {   
+    height: 32px;
+    font-size: 20px; 
+    margin-bottom: 10px;
+}
+.feedback-form > div{
+    padding-right: 8px;
+    margin-bottom: 12px;
+}
+.feedback-form input[type="reset"] {
+	padding: 5px;	
+    margin-bottom: 12px;	
+	background-color: #ff7272;
+	color: #fff;    
+}
+.feedback-form input[type="submit"] {	
+	padding: 10px;	
+	background-color: #ccc;
+	color: #fff;    
+}
+/*Валидация формы (для IE нужен js)*/
+.formError {
+    color: #ff7272;	
+	font-size: 12px;	
+	margin-top: 3px;
+	display: none;
+}
+input:required:invalid:not(:placeholder-shown):not(:focus) + .formError  {
+  	display: block;
+    color: #ff7272;
+}
+input:required:valid:not(:placeholder-shown):not(:focus) {
+    border-color: #333;    
+} 
+input:required:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #ff7272;    
+} 
+.feedback-form:valid input[type="submit"] {
+    background-color: #3b50ef;    
+}
+/*АДРЕС*/
+.map {
+    height: 374px;
+    width: 100%;
+    border: none;     
+}
+.address a {
+    color: inherit;
+    text-decoration: none;
+}
+/*АДАПТИВНОСТЬ*/
+@media screen and (max-width: 1024px) {
+    .shortDes img {width: 100%;}
+    .orderInfo {width: 100%;}
+}
+@media screen and (max-width: 768px) {
+    .address, .feedback {padding: 0 10px 30px;}   
+}
+@media screen and (max-width: 630px) {
+    .feedback-form {width: auto;}  
+    .divide {display: block; border-bottom: 1px solid #adc0ce; padding-bottom: 6px;}
+    nav ul {display: block;}
+    nav ul ul {width: 100%; text-align: left; border-radius: 0; border: none;}
+    nav ul ul a {padding: 10px 19px 10px;}
+    nav ul a {border-bottom: 1px solid #adc0ce;}    
+}
