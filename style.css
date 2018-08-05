@@ -718,11 +718,11 @@ input[name="category"]:hover + .categories__btn{
     background: #fff;
     height: 2px;
 }
-.posts {
+.posts-sec {
     text-align: center;
     padding: 5rem 0;
 }
-.posts__text {
+.posts-sec__text {
     max-width: 769px;
     margin: auto;
 }
